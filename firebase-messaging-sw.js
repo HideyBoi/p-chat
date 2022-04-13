@@ -1,5 +1,4 @@
-import firebase from 'firebase';
-import 'firebase/messaging';
+const { firebase } = require("firebase/app")
 
 if (!firebase.apps.length) {
     firebase.initializeApp({
