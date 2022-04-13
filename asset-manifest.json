@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/p-chat/static/css/main.15581ff4.chunk.css",
-    "main.js": "/p-chat/static/js/main.c4e704b4.chunk.js",
-    "main.js.map": "/p-chat/static/js/main.c4e704b4.chunk.js.map",
+    "main.js": "/p-chat/static/js/main.d787e55a.chunk.js",
+    "main.js.map": "/p-chat/static/js/main.d787e55a.chunk.js.map",
     "runtime-main.js": "/p-chat/static/js/runtime-main.8b4f2921.js",
     "runtime-main.js.map": "/p-chat/static/js/runtime-main.8b4f2921.js.map",
     "static/js/2.0ba74aee.chunk.js": "/p-chat/static/js/2.0ba74aee.chunk.js",
     "static/js/2.0ba74aee.chunk.js.map": "/p-chat/static/js/2.0ba74aee.chunk.js.map",
     "index.html": "/p-chat/index.html",
-    "precache-manifest.104b02284b6bb4f5f251935ec37d3741.js": "/p-chat/precache-manifest.104b02284b6bb4f5f251935ec37d3741.js",
+    "precache-manifest.92ab6b1b65970d13630f92c5c9a5c007.js": "/p-chat/precache-manifest.92ab6b1b65970d13630f92c5c9a5c007.js",
     "service-worker.js": "/p-chat/service-worker.js",
     "static/css/main.15581ff4.chunk.css.map": "/p-chat/static/css/main.15581ff4.chunk.css.map",
     "static/js/2.0ba74aee.chunk.js.LICENSE.txt": "/p-chat/static/js/2.0ba74aee.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.8b4f2921.js",
     "static/js/2.0ba74aee.chunk.js",
     "static/css/main.15581ff4.chunk.css",
-    "static/js/main.c4e704b4.chunk.js"
+    "static/js/main.d787e55a.chunk.js"
   ]
 }
