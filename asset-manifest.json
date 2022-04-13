@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hbd-games/p-chat/static/css/main.15581ff4.chunk.css",
+    "main.js": "/hbd-games/p-chat/static/js/main.8b605197.chunk.js",
+    "main.js.map": "/hbd-games/p-chat/static/js/main.8b605197.chunk.js.map",
+    "runtime-main.js": "/hbd-games/p-chat/static/js/runtime-main.58b8419c.js",
+    "runtime-main.js.map": "/hbd-games/p-chat/static/js/runtime-main.58b8419c.js.map",
+    "static/js/2.86fd3fe2.chunk.js": "/hbd-games/p-chat/static/js/2.86fd3fe2.chunk.js",
+    "static/js/2.86fd3fe2.chunk.js.map": "/hbd-games/p-chat/static/js/2.86fd3fe2.chunk.js.map",
+    "index.html": "/hbd-games/p-chat/index.html",
+    "precache-manifest.0c0bbb7cec49c3d009aca307a75d7fc2.js": "/hbd-games/p-chat/precache-manifest.0c0bbb7cec49c3d009aca307a75d7fc2.js",
+    "service-worker.js": "/hbd-games/p-chat/service-worker.js",
+    "static/css/main.15581ff4.chunk.css.map": "/hbd-games/p-chat/static/css/main.15581ff4.chunk.css.map",
+    "static/js/2.86fd3fe2.chunk.js.LICENSE.txt": "/hbd-games/p-chat/static/js/2.86fd3fe2.chunk.js.LICENSE.txt",
+    "static/media/noti.wav": "/hbd-games/p-chat/static/media/noti.bdc711f4.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58b8419c.js",
+    "static/js/2.86fd3fe2.chunk.js",
+    "static/css/main.15581ff4.chunk.css",
+    "static/js/main.8b605197.chunk.js"
+  ]
+}
