@@ -1,0 +1,490 @@
+body {
+  background-color: #282c34;
+}
+
+.opening-text {
+  text-align: center;
+  color: white;
+  margin-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.App header {
+  background-color: #000000;
+  height: 58px;
+  color: white;
+  position: fixed;
+  width: 100%;
+
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.App header .buttoncontainer {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.App header .buttoncontainer .sign-out {
+  margin-left: 10px;
+  transition: ease-in-out 80ms all;
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(20, 20, 20);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #546483;
+}
+
+.messageBar {
+  height: 60px;
+  
+  background-color: rgb(24, 23, 23);
+  width: 100%;
+
+  display: flex;
+  font-size: 1.5rem;
+  margin-top: 5%;
+
+  justify-content: space-evenly;
+}
+
+.messageBar button {
+  width: 60px;
+  background-color: rgb(92, 92, 156);
+  border-radius: 0;
+  height: 90px;
+}
+.messageBar button:hover {
+  background-color: rgb(62, 62, 102);
+}
+
+form {
+  height: 90px;
+  
+  background-color: rgb(24, 23, 23);
+  width: 100%;
+
+  display: flex;
+  font-size: 1.5rem;
+}
+
+form button {
+  width: 60px;
+  background-color: rgb(92, 92, 156);
+}
+
+form button:hover {
+  background-color: rgb(62, 62, 102);
+}
+
+
+textarea {
+  line-height: 1.5;
+  width: 99%;
+  font-size:large;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(42, 42, 42);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  resize: none;
+}
+
+button {
+  background-color: #3961b1; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+
+  border-radius: 10px;
+
+  transition: ease-in-out 80ms all;
+}
+
+header button:hover {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #0d2a66;
+  transition: ease-in-out 80ms all;
+}
+
+.roomList button:hover {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #0d2a66;
+  transition: ease-in-out 80ms all;
+}
+
+.roomList button:focus {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #0d2a66;
+  transition: ease-in-out 80ms all;
+}
+
+section button:hover {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #c3d6fa;
+  transition: ease-in-out 80ms all;
+}
+
+.roomList button {
+  margin: 2px;
+}
+
+.roomtex {
+  margin-bottom: 32px;
+}
+
+form button {
+  border-radius: 0;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.sign-in {
+  color: #546483;
+  background: white;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+
+
+ul, li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 6px 20px;
+  position: relative;
+  color: white;
+  text-align: center;
+  overflow-x:hidden;
+  text-overflow: ellipsis;
+}
+
+ReactMarkdown { 
+  padding: 0;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+  overflow-x:hidden;
+  text-overflow: ellipsis;
+}
+
+
+.MessageContainer {
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.sent .messageText {
+  display: flex;
+  flex-direction: column;
+  background: rgb(43, 140, 204);
+  border-radius: 10px;
+  padding: 7px;
+  padding-right: 25px;
+  padding-left: 25px;
+  align-items: flex-start;
+  margin: 5px;
+  word-wrap: break-word;
+}
+
+.received .messageText {
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 61, 63);
+  border-radius: 10px;
+  padding: 7px;
+  padding-right: 25px;
+  padding-left: 25px;
+  align-items: flex-start;
+  margin: 5px;
+  word-wrap: break-word;
+}
+
+.MessageContainer blockquote {
+  margin: 0;
+  background-color: #30383d;
+  max-width: 100%;
+  border-radius: 6px 6px 20px 20px;  
+  word-wrap: break-word;
+}
+
+.attatchmentContainer {
+  display: flex;
+  height: fit-content;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.attatchment {
+  max-width: 25%;
+  width: auto;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  justify-self: right;
+  margin: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.attatchment img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.timestamp {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: white;
+  margin-left: 5%;
+  margin-bottom: 15px;
+}
+
+.tssent {
+  margin-left: 5%;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.room {
+  display: flex;
+  align-items: center;
+}
+
+.sent p {
+  color: white;
+  margin: 1px;
+  word-wrap: break-word;
+  padding: 0;
+  max-width: 100%;
+  text-align: left;
+}
+.received p {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  text-align: left;
+  color: white;
+}
+
+.sent a {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.received a {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.sent h1 {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.received h1 {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.sent h2 {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.received h2 {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.sent h3 {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+.received h3 {
+  margin: 1px;
+  padding: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: white;
+}
+
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.678); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  backdrop-filter: blur(8px);
+
+  transition: ease-in-out;
+} 
+
+#overlayText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#imgurUpload {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.678); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  backdrop-filter: blur(8px);
+}
+
+#imgurUploadInner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: medium;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imgurUploadInner form {
+  background-color: #00000000;
+}
+
+#imgurUploadInner input {
+  background-color: #00000000;
+  font-size: medium;
+}
+
+#imgurUploadInner button {
+  font-size: medium;
+  border-radius: 5px;
+  min-width: fit-content;
+}
+#imgurUploadInner button:hover {
+  background-color: rgb(62, 62, 102);
+}
+
+#chatroom{
+  background-color: #00000000;
+}
+
+.roomList {
+  padding: 10px;
+  height: 75vh;
+  margin: 10vh 0 10vh;
+  display: flex;
+  flex-direction: column;
+}
