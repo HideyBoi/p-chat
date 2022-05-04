@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
-import {room, switchRoom} from './Componets/RoomList'
+import {switchRoom} from './Componets/RoomList'
 import {SignIn, SignOut} from './Componets/Auth';
 import ChatRoom from "./Componets/ChatRoom"
 
@@ -47,6 +47,7 @@ const onFocus = () => {
 const onBlur = () => {
 	console.log("Tab is blurred");
 	focused = false;
+	document.getElementById("startRoom").style.display = "flex";
 };
 const WindowFocusHandler = () => {
   	useEffect(() => {
@@ -79,7 +80,7 @@ function App() {
 	const [roomButtonName, setButtonName] = useState("Rooms")
 
 	function RoomButtonClicked() {
-		if (roomButtonName == "Rooms") {
+		if (roomButtonName === "Rooms") {
 			setButtonName("Rooms");
 		} else {
 			setButtonName("Rooms")
@@ -106,18 +107,76 @@ function App() {
       	</header>
 
       	<section>
-        	{user ? <>{id === null ? <Start /> : <ChatRoom />}</> : <SignIn />}
+        	{user ? <>{id === null ? <Start /> : <>{id === "kimi" ? <SusRoomBlock /> : <ChatRoom />}</>}</> : <SignIn />}
       	</section>
-      	<WindowFocusHandler></WindowFocusHandler>
+      	<WindowFocusHandler />
     	</div>
   	);
 }
 
+
 function Start() {
-  	return(<>
-    	<StartScreen userName={auth.currentUser.displayName} />
-    	<ChatRoom />
-  	</>)
+
+  	return(
+	 	<>
+			<StartScreen userName={auth.currentUser.displayName} />
+	  		<ChatRoom />
+		</>
+	);
+}
+
+function SusRoomBlock() {
+
+	const [code, setCode] = useState("");
+
+	function grow(e) {
+		if (e === "CLEAR") {
+			setCode("");
+		} else if (e === "BACK") {
+			if (e !== "") {
+				setCode(code.slice(0, -1))
+			}
+		} else {
+			if (code.length < 8) {
+				setCode(code + e);
+			}
+		}
+	}
+
+	function submit() {
+		if (code === "69694420") {
+			setCode("");
+			document.getElementById("startRoom").style.display = "none";
+		} else {
+			setCode("Incorrect Pin, system locked, contact head admin.");
+		}
+	}
+
+	return(<>
+		<div id='startRoom'>
+			<h1>CRITICAL ERROR</h1>
+			<p>Your login token expired.</p>
+			<p>Switch to another room or refresh to reset your token.
+				<br />
+			Or, if you're an admin, input your login code to run tests.<br />{code}</p>
+			<div className='startRoomButtonContainer'>
+				<button onClick={() => grow("1")}>1</button>
+				<button onClick={() => grow("2")}>2</button>
+				<button onClick={() => grow("3")}>3</button>
+				<button onClick={() => grow("4")}>4</button>
+				<button onClick={() => grow("5")}>5</button>
+				<button onClick={() => grow("6")}>6</button>
+				<button onClick={() => grow("7")}>7</button>
+				<button onClick={() => grow("8")}>8</button>
+				<button onClick={() => grow("9")}>9</button>
+				<button onClick={() => grow("CLEAR")}>C</button>
+				<button onClick={() => grow("0")}>0</button>
+				<button onClick={() => grow("BACK")}>⇐</button>
+			</div>
+			<button onClick={submit}>Submit</button>
+		</div>
+		<ChatRoom />
+	</>);
 }
 
 export function incMsgOpen() {

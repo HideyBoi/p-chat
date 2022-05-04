@@ -42,3 +42,21 @@
     flex-direction: column;
     align-items: center;
 }
+
+.startRoomButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 159px;
+}
+
+#startRoom button {
+    margin: 2px;
+    display: flex;
+    transition: cubic-bezier();
+}
+#startRoom button:hover {
+    background-color: black;
+    padding: 8px 16px;
+    transition: cubic-bezier();
+}

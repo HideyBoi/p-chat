@@ -4,7 +4,6 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { roomDisplayName } from './RoomList';
 
 import UploadButton, { imageToAttach, ClearImgAttach } from './FileUpload';
 
@@ -45,6 +44,7 @@ function ChatRoom() {
     const [messages] = useCollectionData(query, { idField: 'id' });
 
     const [RAND, setRAND] = useState(0);
+    console.log(RAND);
 
     const sendMessage = async (e) => {
         console.log(e);
@@ -77,13 +77,12 @@ function ChatRoom() {
         dummy.current.scrollIntoView();
         const listener = event => {
             if (event.code === "Enter" && event.shiftKey) {
-                console.log("Enter key was pressed. Run your function.");
                 event.preventDefault();
                 sendMessage(event);
             }
         };
         document.addEventListener("keydown", listener);
-    }, [messages])
+    })
 
     function inputInteracted () {
         dummy.current.scrollIntoView();
